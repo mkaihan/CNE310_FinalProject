@@ -2,13 +2,13 @@
 <html>
 <head>
 <title>Category: {{categoryName}}</title>
-<link rel="stylesheet" href={{ url_for('static', filename='css/home.css') }} />
-<link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css') }} />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/topStyle.css') }}" />
 </head>
 <body>
 <div id="title">
 	<a href="/">
-		<img id="logo" src= {{ url_for('static', filename='images/logo.png') }} />
+		<img id="logo" src= "{{ url_for('static', filename='images/logo.png') }}" />
 	</a>
 
 	{% if not loggedIn %}
@@ -49,7 +49,7 @@
 			{% for row in itemData %}
 			<td>
 				<a href="/productDescription?productId={{row[0]}}">
-					<img src={{ url_for('static', filename='uploads/' + row[3]) }} id="itemImage" />
+					<img src="{{ url_for('static', filename='uploads/' + row[3]) }}" id="itemImage" />
 				</a>
 			</td>
 			{% endfor %}
