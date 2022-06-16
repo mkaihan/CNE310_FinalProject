@@ -109,7 +109,7 @@ def displayCategory():
     else:
         # invalid return
         # assign default values since no books are available
-        error_values = [(0, 'Currently no available books within this category', 0.0, 'error.jpg', 'Error')]
+        error_values = [(0, 'This error is way beyond my knowledge', 0.0, 'error.jpg', 'Error')]
         category_name = error_values[0][4]
         data = parse(error_values)
         print("error data:", data)
